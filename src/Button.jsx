@@ -2,15 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledButton = styled.button`
-  background-color: white;
+  background-color: whitesmoke;
   padding: 0;
-  border: 0.33rem solid white;
+  border: 0.1rem solid whitesmoke;
   box-shadow: 4px 4px 8px darkgrey;
   position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   overflow: hidden;
   :focus {
     outline: none;

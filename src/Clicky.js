@@ -19,7 +19,7 @@ export default class Clicky {
   //Image tracking
   pickImage(image) {
     const currentImgCount = this.pickedImages.size;
-    this.pickImages.add(image);
+    this.pickedImages.add(image);
     if (this.pickedImages.size <= currentImgCount) {
       this.gameDidChange(Clicky.events.GAME_OVER);
       this.reset();

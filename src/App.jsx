@@ -9,8 +9,9 @@ import LocalStorage from "./LocalStorage";
 function App() {
   const clickyGame = useRef(
     new Clicky(function gameDidChange(gameChange) {
+      console.log(gameChange);
       switch (gameChange) {
-        case Clicky.events.SCORE_CHANGED:
+        case Clicky.events.SCORE_CHANGE:
           setScore(clickyGame.current.score);
           setHighScore(Math.max(highScore, clickyGame.current.highScore));
           break;
@@ -39,7 +40,7 @@ function App() {
   useEffect(() => {
     console.warn("FETCHING IMAGES");
     fetch(
-      "https://api.giphy.com/v1/gifs/trending?api_key=3hPxd0a3DJQ3k3t27sgeCzaLVtAuCdoW&limit=12"
+      "https://api.giphy.com/v1/stickers/search?api_key=3hPxd0a3DJQ3k3t27sgeCzaLVtAuCdoW&q=aliens&limit=12&offset=1&rating=G&lang=en"
     )
       .then(data => data.json())
       .then(gifs =>
@@ -51,14 +52,10 @@ function App() {
   return (
     <>
       <RibbonBar>
-        {gameOver && (
-          <Label size={1.7} style={{ float: "right" }}>
-            Game Over!
-          </Label>
-        )}
-        <Label size={1.9}>Clicky Game</Label>
-        <Label>High Score: {highScore}</Label>
-        <Label>Score: {score}</Label>
+        <Label>CLICKY GAME</Label>
+        <Label size={1.9}>High Score: {highScore}</Label>
+        <Label size={1.9}>Score: {score}</Label>
+        {gameOver && <Label size={1.0}>Game Over!</Label>}
       </RibbonBar>
       <Grid>
         {images.length > 0 &&
