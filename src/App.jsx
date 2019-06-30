@@ -34,9 +34,9 @@ class App extends Component {
   };
 
   imageClick = event => {
-    const currentImg = event.target;
+    const currentImg = event.target.src;
     console.log(currentImg);
-    console.log(event.target);
+    console.log(event.target.src);
     console.log(event);
     const isClicked = this.state.clicked.indexOf(currentImg) > -1;
     if (isClicked) {
