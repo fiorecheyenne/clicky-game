@@ -4,7 +4,7 @@ export default styled.p`
   background-color: transparent;
   padding: 2px;
   margin: 5px;
-  /* display: table; */
+
   text-align: center;
   color: whitesmoke;
   font-family: "Montserrat", sans-serif;
