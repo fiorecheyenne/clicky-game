@@ -9,7 +9,7 @@ const StyledButton = styled.button`
   position: relative;
   top: 0;
   left: 0;
-  width: 100%;
+  /* width: 100%; */
   overflow: hidden;
   :focus {
     outline: none;
@@ -21,9 +21,9 @@ const StyledImg = styled.img`
   min-width: 100%;
   margin: auto;
   position: relative;
-  left: 50%;
+  /* left: 50%;
   top: 50%;
-  transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%); */
 `;
 
 export default function Button({ children, img, alt, onClick, w, h }) {
